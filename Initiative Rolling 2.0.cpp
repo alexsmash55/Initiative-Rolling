@@ -26,7 +26,11 @@ void InitiativeList()
 		cout << "\nType a creature name (or stop/STOP to roll the initiative): ";
 		cin >> name;
 
-		if (name == "stop" || name == "STOP" || name == "Stop") { break; }
+		if (name == "stop" || name == "STOP" || name == "Stop")
+		{
+			DoInitiative = false;
+			continue;
+		}
 
 		cout << "Type creature's initiative mod: ";
 		cin >> init_mod;
